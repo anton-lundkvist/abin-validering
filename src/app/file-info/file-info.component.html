@@ -1,0 +1,45 @@
+<div class="fileReadingError"></div>
+<div *ngIf="$fileInfo|async">
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12 bold-col">
+            Antal rader
+        </div>
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12">
+            {{($fileInfo|async)?.rows}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12 bold-col">
+            Antal kolumner
+        </div>
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12">
+            {{($fileInfo|async)?.columns}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12 bold-col">
+            Kolumnnamn
+        </div>
+        <div class="col-xs-12
+                    col-sm-12
+                    col-md-12
+                    col-lg-12">
+            {{($fileInfo|async)?.columnNames?.join(" , ")}}
+        </div>
+    </div>
+</div>
