@@ -31,4 +31,14 @@ export class ValidationInfoComponent implements OnInit {
       })
   }
 
+  downloadValidationResult = () => {
+    if (!this.validationResult) {
+      return;
+    }
+
+    let csvContent = "data:text/csv;charset=utf-8,%EF%BB%BF" + encodeURI(this.validationResult.map(e => `${e.severity}; ${e.row}; ${e.description}`).join("\n"));
+    window.open(csvContent);
+
+  }
+
 }
