@@ -1,0 +1,2 @@
+<input type="file" id="file" (change)="fileSelected($event)" />
+<mat-progress-bar *ngIf="$readingFile|async" mode="indeterminate"></mat-progress-bar>

@@ -1,0 +1,26 @@
+<div *ngIf="validationResult">
+    <h2>Valideringsresultat</h2>
+    <p>Valideringen hittade <b>{{antalFel}} fel</b> som måste åtgärdas och <b>{{antalVarningar}} varningar </b> som bör
+        ses över.</p>
+    <!-- <ul *ngIf="validationResult!.length>0">
+        <li *ngFor="let item of validationResult">
+            <div class="validated-item">
+                <span class="material-icons-outlined error-icon" *ngIf="item.severity === 'error'">
+                    cancel
+                </span>
+                <span class="material-icons-outlined warning-icon" *ngIf="item.severity === 'warning'">
+                    error_outline
+                </span>
+                <div>
+                    Rad:{{item.row}}. {{item.description}}
+                </div>
+
+            </div>
+
+        </li>
+    </ul> -->
+    <app-result-table></app-result-table>
+    <div *ngIf="validationResult!.length === 0">
+        Inga fel hittades
+    </div>
+</div>

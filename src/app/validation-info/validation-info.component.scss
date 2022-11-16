@@ -1,0 +1,25 @@
+li {
+    list-style-type: none;
+}
+
+.validated-item {
+    display: flex;
+    align-items: center;
+
+    span.material-icons-outlined {
+        margin-right: .5rem;
+        font-size: 18px;
+
+        &.error-icon {
+            color: #de5246;
+        }
+
+        &.warning-icon {
+            color: #ffce44;
+        }
+    }
+
+    div {
+        font-size: 14px;
+    }
+}
